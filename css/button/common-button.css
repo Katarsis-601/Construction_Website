@@ -1,9 +1,9 @@
 .common-btn {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 10px;
   border-radius: 15px;
+  justify-content: center;
   padding: 5px 15px;
 }
 
@@ -26,6 +26,7 @@
 
 .btn-black {
   background-color: black;
+  border-radius: 10px;
   color: white;
 }
 

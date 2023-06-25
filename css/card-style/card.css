@@ -5,9 +5,7 @@
   text-align: center;
   overflow: auto;
   gap: 10px;
-}
-.project-card::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: none;
 }
 .project-list {
   border-radius: 20px;
