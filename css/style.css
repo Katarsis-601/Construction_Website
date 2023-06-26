@@ -15,6 +15,9 @@ body {
 p {
   margin: 0;
 }
+input:focus {
+  outline: none;
+}
 ul {
   padding: 0;
   margin: 0;
@@ -476,6 +479,8 @@ main {
 }
 .form-contact_content {
   margin-top: 40px;
+  align-items: flex-start;
+  justify-content: center;
   display: flex;
   gap: 30px;
 }
@@ -506,9 +511,6 @@ form {
   border-radius: 10px;
 }
 
-input:focus {
-  outline: none;
-}
 .input-container {
   gap: 14px;
   display: grid;
@@ -536,9 +538,12 @@ input:focus {
   width: 100%;
 }
 .contact-container {
+  max-width: 30%;
+  height: 100%;
+  padding: 15px 40px;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  padding: 15px 40px;
   background-color: #ff7420;
   border-radius: 20px;
 }
@@ -548,6 +553,12 @@ input:focus {
   font-size: 150%;
   font-weight: 500;
 }
+.contact-content_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .contact-list {
   display: flex;
   flex-direction: column;
@@ -562,4 +573,68 @@ input:focus {
 .contact-description {
   margin: 24px 0;
   font-size: 120%;
+}
+.newsletter {
+  background-color: #191a19;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.newsletter-container {
+  justify-content: space-between;
+}
+.newsletter-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-title {
+  font-family: Unlock, sans-serif;
+}
+.newsletter-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #ffffff80;
+  color: #ffffff80;
+  padding-bottom: 5px;
+}
+footer {
+  padding: 20px 0;
+  background-color: #191a19;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.footer-about {
+  max-width: 30%;
+}
+.link-list {
+  gap: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+.footer_title {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 100%;
+}
+.footer_text {
+  font-size: 80%;
+}
+.social_media {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
