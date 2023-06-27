@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  min-width: 500px;
   margin: 0;
   font-family: "Poppins", sans-serif;
   padding: 0;
@@ -57,8 +58,10 @@ button {
 }
 
 header {
+  min-width: 500px;
+
   position: fixed;
-  z-index: 99;
+  z-index: 8;
   top: 0;
   display: flex;
   flex-flow: row wrap;
@@ -66,6 +69,44 @@ header {
   width: 100%;
   background: #191a19;
   color: white;
+}
+.navbar-btn {
+  display: none;
+  color: white;
+  padding: 10px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid #ff7420;
+}
+
+.navbar-btn::before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 4px;
+  top: -8px;
+  background-color: #ff7420;
+}
+
+.navbar-line:after {
+  content: " ";
+
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 4px;
+  top: -16px;
+  background-color: #ff7420;
+}
+.navbar-btn::after {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 4px;
+  top: -24px;
+  background-color: #ff7420;
 }
 
 .header-logo-text {
@@ -82,7 +123,13 @@ nav {
   width: 40%;
   justify-content: space-evenly;
 }
-
+.navbar-container {
+  width: 60%;
+}
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+}
 .nav-text {
   font-weight: 500;
   font-family: 150%;
@@ -224,7 +271,7 @@ main {
   margin-top: 90px;
   display: flex;
   justify-content: space-between;
-  flex-flow: row wrap;
+  flex-direction: row;
 }
 .description-content {
   width: 55%;
@@ -398,7 +445,7 @@ main {
 }
 
 .testimonials-text {
-  width: 1000px;
+  width: 80%;
   font-size: 120%;
 }
 
@@ -464,13 +511,13 @@ main {
 .form-contact_container {
   flex-direction: column;
 }
+.form-contact_list-content {
+  display: flex;
+  gap: 30px;
+}
 .form-contact_list {
   display: flex;
   align-items: center;
-  gap: 30px;
-}
-.contact-list {
-  display: flex;
   gap: 10px;
 }
 .contact-text {
@@ -479,6 +526,7 @@ main {
 }
 .form-contact_content {
   margin-top: 40px;
+  width: 100%;
   align-items: flex-start;
   justify-content: center;
   display: flex;
@@ -500,7 +548,8 @@ form {
 }
 
 .form-text {
-  width: 600px;
+  width: 100%;
+
   font-size: 10 0%;
   margin-bottom: 18px;
 }
@@ -599,6 +648,7 @@ form {
   padding-bottom: 5px;
 }
 footer {
+  width: 100%;
   padding: 20px 0;
   background-color: #191a19;
   color: white;
@@ -637,4 +687,116 @@ footer {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 0.8em;
+  }
+  .navbar-container {
+    display: none;
+    justify-content: center;
+    position: absolute;
+    padding-bottom: 30px;
+    z-index: 99;
+    width: 100%;
+    top: 95px;
+    left: 0;
+    right: 0;
+    background-color: #191a19;
+  }
+  .navbar-content {
+    width: 90%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+  }
+  .header-btn {
+    display: flex;
+  }
+  .navbar-btn {
+    display: block;
+  }
+  .banner-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner {
+    margin-top: 200px;
+    text-align: center;
+    width: 100%;
+  }
+  .banner-btn {
+    justify-content: center;
+  }
+  .banner-box {
+    top: 100px;
+  }
+  .experience-total {
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .form-contact_content {
+    flex-direction: column;
+  }
+  .contact-container {
+    max-width: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .experience-total {
+    margin-top: 80px;
+  }
+  .experience-description {
+    flex-direction: column;
+    align-items: center;
+  }
+  .description-content {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .project-navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-navbar_list {
+    justify-content: center;
+  }
+  .form-contact_title {
+    text-align: center;
+    width: 90%;
+  }
+  .form-contact_container {
+    align-items: center;
+  }
+  .form-contact_list-content {
+    text-align: center;
+  }
+  .form-contact_list {
+    flex-direction: column;
+  }
+  form {
+    width: 100%;
+    text-align: center;
+  }
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .newsletter-container {
+    flex-direction: column;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
