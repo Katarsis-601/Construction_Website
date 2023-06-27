@@ -125,8 +125,11 @@ nav {
 }
 .navbar-container {
   width: 60%;
+  display: flex;
+  align-items: center;
 }
 .navbar-content {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
