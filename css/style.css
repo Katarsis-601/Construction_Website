@@ -669,6 +669,7 @@ footer {
   align-items: flex-start;
   flex-direction: column;
 }
+
 .footer-about {
   max-width: 30%;
 }
@@ -690,6 +691,15 @@ footer {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+}
+
+.credits-text {
+  font-weight: 700;
+  font-size: 50%;
+  line-height: 15px;
+  letter-spacing: 10%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 @media only screen and (max-width: 768px) {
