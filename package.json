@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "lite-server --baseDir=./dist/",
     "dev": "webpack -c ./webpack.dev.js",
-    "production": "webpack -c ./webpack.production.js",
+    "production": "webpack -c ./webpack.prod.js",
     "build": "npm run dev & npm run serve"
   },
   "author": "",

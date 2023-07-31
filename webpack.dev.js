@@ -7,12 +7,13 @@ module.exports = merge(config, {
   watch: true,
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "js/[name].js",
-    assetModuleFilename: "asset/[name].[ext]",
+    filename: "src/js/[name].js",
+    assetModuleFilename: "src/asset/[name].[ext]",
   },
+
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "css/[name].css",
+      filename: "src/css/[name].css",
     }),
   ],
 });
