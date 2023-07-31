@@ -1,0 +1,22 @@
+{
+  "name": "construction_website",
+  "version": "1.0.0",
+  "description": "- Live Site URL: [Click Here](https://katarsis-601.github.io/Construction_Website/)",
+  "main": "index.js",
+  "scripts": {
+    "serve": "lite-server --baseDir=./dist/",
+    "dev": "webpack -c ./webpack.dev.js",
+    "production": "webpack -c ./webpack.prod.js",
+    "build": "npm run dev & npm run serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^3.3.3"
+  }
+}
